@@ -4,7 +4,8 @@
 @main
 struct MyCLI {
     static func main() {
-        Optionals.learn()
+        CollectionTypes.learn()
+        //Optionals.learn()
         //Variables.learn()
     }
 }
