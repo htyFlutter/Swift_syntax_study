@@ -43,4 +43,17 @@ enum ControlFlow {
         }
         print("\(age)歳はお酒購入できます！")
     }
+    
+    static func checkPoint(_ point: (Int, Int)) {
+        switch point {
+        case (0, 0):
+            print("原点にいます")
+        case (let x, 0):
+            print("x軸の上、x = \(x)")
+        case (0, let y):
+            print("y軸の上 y = \(y)")
+        case (let x, let y):
+            print("座標\(x), \(y)にいます。")
+        }
+    }
 }
