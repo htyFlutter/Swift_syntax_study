@@ -4,7 +4,12 @@
 @main
 struct MyCLI {
     static func main() {
-        CollectionTypes.learn()
+        ControlFlow.checkAge(age: nil)
+        ControlFlow.checkAge(age: 10)
+        ControlFlow.checkAge(age: 18)
+        ControlFlow.checkAge(age: 20)
+        //ControlFlow.learn()
+        //CollectionTypes.learn()
         //Optionals.learn()
         //Variables.learn()
     }
