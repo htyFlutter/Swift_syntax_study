@@ -4,8 +4,10 @@
 @main
 struct MyCLI {
     static func main() {
+        Closures.learn()
         
-        Functions.learn()
+        
+        //Functions.learn()
         
         
         //ControlFlow.checkAge(age: nil)
