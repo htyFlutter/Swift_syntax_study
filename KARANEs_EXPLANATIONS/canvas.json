@@ -1,0 +1,14 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",        "x": 0,    "y": 0,    "w": 760, "h": 1300 },
+    { "file": "Operators.dc.html",   "x": 880,  "y": 0,    "w": 760, "h": 1300 },
+    { "file": "Strings.dc.html",     "x": 1760, "y": 0,    "w": 760, "h": 1300 },
+    { "file": "Collections.dc.html", "x": 0,    "y": 1440, "w": 760, "h": 1300 },
+    { "file": "ControlFlow.dc.html", "x": 880,  "y": 1440, "w": 760, "h": 1300 },
+    { "file": "Functions.dc.html",   "x": 1760, "y": 1440, "w": 760, "h": 1300 }
+  ],
+  "annotations": [
+    { "id": "title-note", "x": 0, "y": -150, "w": 620, "text": "からね's Swift 復習カード ── The Swift Programming Language 攻略ログ\n29単元中、01〜06 制覇。左上から章順に読みなさい。" }
+  ],
+  "launch": { "view": "canvas" }
+}
