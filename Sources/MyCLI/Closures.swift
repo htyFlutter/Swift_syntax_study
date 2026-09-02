@@ -27,5 +27,21 @@ enum Closures {
         let scores = ["math": 80, "english": 60, "science": 90]
         let scored = scores.sorted { $0.value < $1.value }
         print(scored)
+        
+        
+        let langs = ["Swift", "Dart", "Python"]
+        langs.forEach { lang in
+            print("言語: \(lang)")
+        }
+        
+        let numbers = [1, 2, 3, 4, 5]
+        let total = numbers.reduce(0) { $0 + $1 }
+            print(total)
+        
+        let totals = numbers.reduce(0) { runningTotal, num in
+            runningTotal + num
+        }
+        print(totals)
+        
     }
 }
