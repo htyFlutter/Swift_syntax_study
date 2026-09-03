@@ -4,7 +4,8 @@
 @main
 struct MyCLI {
     static func main() {
-        Closures.learn()
+        Structures.learn()
+        //Closures.learn()
         
         
         //Functions.learn()
