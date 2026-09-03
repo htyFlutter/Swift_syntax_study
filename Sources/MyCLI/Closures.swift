@@ -36,12 +36,12 @@ enum Closures {
         
         let numbers = [1, 2, 3, 4, 5]
         let total = numbers.reduce(0) { $0 + $1 }
-            print(total)
+        print(total)
         
-        let totals = numbers.reduce(0) { runningTotal, num in
+        let totalShort = numbers.reduce(0) { runningTotal, num in
             runningTotal + num
         }
-        print(totals)
+        print(totalShort)
         
     }
 }
