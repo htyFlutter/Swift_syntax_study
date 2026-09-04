@@ -4,7 +4,10 @@
 @main
 struct MyCLI {
     static func main() {
-        Structures.learn()
+        Enumerations.learn()
+        
+        //Structures.learn()
+        
         //Closures.learn()
         
         
