@@ -1,10 +1,39 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
+class Animal {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+    
+    func speak() {
+        print("\(name)は鳴いた")
+    }
+}
+
+class Dog : Animal {
+    var breed: String
+    init(name: String, breed: String) {
+        self.breed = breed
+        super.init(name: name)
+    }
+    override func speak() {
+        super.speak()
+        print("\(name)(\(breed))はワン！と鳴いた！")
+    }
+}
+
 @main
 struct MyCLI {
     static func main() {
-        Counter.learn() 
+        
+        let a = Animal(name: "なにか")
+        a.speak()
+        
+        let d = Dog(name: "Pochi", breed: "Shiba")
+        d.speak()
+        //Counter.learn()
         
         //Properties.learn()
         
