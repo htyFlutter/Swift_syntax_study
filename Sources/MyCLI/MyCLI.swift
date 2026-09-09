@@ -24,15 +24,44 @@ class Dog : Animal {
     }
 }
 
+struct Player {
+    var name: String
+    var hp: Int
+    
+    init(name: String) {
+        self.name = name
+        self.hp = 0
+    }
+    init?(name: String, hp: Int) {
+        if hp <= 0 {
+            return nil
+        }
+        self.name = name
+        self.hp = hp
+    }
+
 @main
 struct MyCLI {
     static func main() {
         
-        let a = Animal(name: "なにか")
-        a.speak()
+        //let a = Animal(name: "なにか")
+        //a.speak()
         
-        let d = Dog(name: "Pochi", breed: "Shiba")
-        d.speak()
+        //let d = Dog(name: "Pochi", breed: "Shiba")
+        //?d.speak()
+        
+        
+        let p = Player(name: "test", hp: -1) ?? Player(name: "予備", hp: 50)
+        let status = p!.hp > 30 ? "元気" : "GAME OVER"
+        print("\(p!.name): 状態: \(status)")
+        
+        if let ng = Player(name: "バグ", hp: -100) {
+            print("\(ng.name)誕生 HP: \(ng.name)")
+        } else {
+            print("HPが不正なので作成失敗しました。")
+        }
+    }
+        
         //Counter.learn()
         
         //Properties.learn()
