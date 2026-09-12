@@ -1,6 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
-
+    /*
 class Animal {
     var name: String
     init(name: String) {
@@ -39,10 +39,30 @@ struct Player {
         self.name = name
         self.hp = hp
     }
+     */
+
+struct Weapon {
+    var name: String
+    var maker: String?
+}
+struct Hero {
+    var name: String
+    var weapon: Weapon?
+}
 
 @main
 struct MyCLI {
     static func main() {
+        
+        let armed = Hero(name: "はやと", weapon: Weapon(name: "鉄砲", maker: nil))
+        let name1 = armed.weapon?.name ?? "素手"
+        let makerName = armed.weapon?.maker ?? "製造元不明"
+        print("\(armed.name)の武器: \(name1), 製造元: \(makerName)")
+        
+        let barehand = Hero(name: "ビギナー", weapon: nil)
+        let name2 = barehand.weapon?.name ?? "素手"
+        print("\(barehand.name)の武器: \(name2)")
+        
         
         //let a = Animal(name: "なにか")
         //a.speak()
@@ -51,6 +71,7 @@ struct MyCLI {
         //?d.speak()
         
         
+        /*
         let p = Player(name: "test", hp: -1) ?? Player(name: "予備", hp: 50)
         let status = p!.hp > 30 ? "元気" : "GAME OVER"
         print("\(p!.name): 状態: \(status)")
@@ -60,7 +81,8 @@ struct MyCLI {
         } else {
             print("HPが不正なので作成失敗しました。")
         }
-    }
+        */
+        
         
         //Counter.learn()
         
