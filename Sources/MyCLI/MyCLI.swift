@@ -59,7 +59,7 @@ struct MyCLI {
     static func main() {
         
         let iphone = Hero(name: "はやと", weapon: Weapon(name: "iPhone", maker: Maker(company: "Apple")))
-        let herosIphone = iphone.weapon?.maker?.company ?? "なんだ？"
+        let herosIphone = iphone.weapon?.name ?? "なんだ？"
         let ip = iphone.weapon?.maker?.company ?? "どこ？"
         print("\(iphone.name)の\(herosIphone)の製造元: \(ip)")
     }
