@@ -1,46 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
-    /*
-class Animal {
-    var name: String
-    init(name: String) {
-        self.name = name
-    }
-    
-    func speak() {
-        print("\(name)は鳴いた")
-    }
-}
-
-class Dog : Animal {
-    var breed: String
-    init(name: String, breed: String) {
-        self.breed = breed
-        super.init(name: name)
-    }
-    override func speak() {
-        super.speak()
-        print("\(name)(\(breed))はワン！と鳴いた！")
-    }
-}
-
-struct Player {
-    var name: String
-    var hp: Int
-    
-    init(name: String) {
-        self.name = name
-        self.hp = 0
-    }
-    init?(name: String, hp: Int) {
-        if hp <= 0 {
-            return nil
-        }
-        self.name = name
-        self.hp = hp
-    }
-     */
-
+/*
 struct Weapon {
     var name: String
     var maker: Maker?
@@ -53,15 +13,37 @@ struct Hero {
 struct Maker {
     var company: String
 }
+ */
+
+enum AgeError: Error {
+    case tooYoung
+    case tooOld
+}
+
+func checkAge(_ age: Int) throws {
+    if age < 0 {
+        throw AgeError.tooOld
+    }
+    if age < 18 {
+        throw AgeError.tooYoung
+    }
+    print("\(age)歳、入場できます。")
+}
 
 @main
 struct MyCLI {
     static func main() {
-        
-        let iphone = Hero(name: "はやと", weapon: Weapon(name: "iPhone", maker: Maker(company: "Apple")))
-        let herosIphone = iphone.weapon?.name ?? "なんだ？"
-        let ip = iphone.weapon?.maker?.company ?? "どこ？"
-        print("\(iphone.name)の\(herosIphone)の製造元: \(ip)")
+        do {
+            try checkAge(18)
+            try checkAge(10)
+            try checkAge(30)
+        } catch AgeError.tooYoung {
+            print("18歳以上で入場できます。")
+        } catch AgeError.tooOld {
+            print("年齢を確認してください。")
+        } catch {
+            print("予期せぬエラーが発生しました。\(error)")
+        }
     }
 }
 
